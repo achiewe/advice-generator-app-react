@@ -20,5 +20,8 @@ const StyledMain = styled.div`
   align-items: center;
   background-color: #202733;
   padding: 0 16px;
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
 `;
 export default App;
