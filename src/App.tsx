@@ -1,12 +1,12 @@
 import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
-import AdviceBox from "./components/AdviceBox";
+import AdviceContaier from "./components/AdviceContainer";
 
 function App(): JSX.Element {
   return (
     <StyledMain>
       <GlobalStyles />
-      <AdviceBox />
+      <AdviceContaier />
     </StyledMain>
   );
 }
