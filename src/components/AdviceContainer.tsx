@@ -17,12 +17,11 @@ const AdviceContaier = (): JSX.Element => {
   useEffect(() => {
     const requestData = async () => {
       const response = await axios.get("https://api.adviceslip.com/advice");
-      const data = response.data;
+      const data = response.data.slip;
       setAdviceInfo(data);
     };
     requestData();
   }, [click]);
-  console.log(adviceInfo);
 
   const changeInfo = () => {
     setClick(!click);
@@ -31,7 +30,7 @@ const AdviceContaier = (): JSX.Element => {
   return (
     <BoxContainer>
       <div>
-        <h3>ADVICE {adviceInfo?.id}</h3>
+        <h3>ADVICE #{adviceInfo?.id}</h3>
         <p>{adviceInfo?.advice}</p>
       </div>
       <img
